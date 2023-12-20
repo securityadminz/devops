@@ -1,0 +1,9 @@
+---
+- name: Install zsh on Ubuntu
+  hosts: lv2srvcsm12 lv2srvcsm13
+  become: yes
+  tasks:
+      - name: Check and install updates
+        apt:
+          name: "*"
+          state: latest
